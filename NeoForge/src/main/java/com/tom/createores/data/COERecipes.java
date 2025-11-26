@@ -128,23 +128,24 @@ public class COERecipes extends RecipeProvider {
 
 		seedRandom = new Random(10387320);
 
-		new DrillingBuilder(Items.RAW_IRON, 30*20, 1024, 128).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).veinSize(10, 30).save("iron", consumer);
-		new DrillingBuilder(Items.RAW_GOLD, 30*20, 1024, 512).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).veinSize(2, 4).setStress(192).save("gold", consumer);
-		new DrillingBuilder(Items.RAW_COPPER, 30*20, 1024, 128).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).veinSize(10, 30).save("copper", consumer);
-		new DrillingBuilder(Items.COAL, 10*20, 1024, 128).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).veinSize(15, 40).save("coal", consumer);
-		new DrillingBuilder(Registration.RAW_DIAMOND.get(), 60*20, 2048, 1024).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).setStress(512).veinSize(0.5f, 2).save("diamond", consumer);
-		new DrillingBuilder(Registration.RAW_REDSTONE.get(), 30*20, 1024, 256).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).veinSize(10, 30).save("redstone", consumer);
-		new DrillingBuilder(Registration.RAW_EMERALD.get(), 60*20, 2048, 1024).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).veinSize(0.2f, 1).setStress(512).save("emerald", consumer);
-		new DrillingBuilder(new ProcessingOutput(new ItemStack(Registration.RAW_DIAMOND.get()), 1F), 20*20, Component.translatable("ore.coe.hardenedDiamond"), 4096, 2048).addOutput(Items.DIAMOND, 0.1f).setDrill(Ingredient.of(Registration.NETHERITE_DRILL_ITEM.get())).setDrillingFluid(FluidIngredient.fromFluid(Fluids.LAVA, 500)).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).setStress(1024).veinSize(1f, 3f).save("hardened_diamond", consumer);
-		new DrillingBuilder(AllItems.RAW_ZINC.get(), 30*20, 1024, 128).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).veinSize(8, 24).save("zinc", consumer);
-		new DrillingBuilder(Items.LAPIS_LAZULI, 20*20, 1024, 128).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).veinSize(8, 24).save("lapis", consumer);
+		new DrillingBuilder(Items.RAW_IRON, 800, 1024, 128).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).veinSize(10, 30).setStress(32).save("iron", consumer);
+		new DrillingBuilder(Items.RAW_GOLD, 800, 1024, 512).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).veinSize(2, 4).setStress(40).save("gold", consumer);
+		new DrillingBuilder(Items.RAW_COPPER, 400, 1024, 128).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).veinSize(10, 30).setStress(21).save("copper", consumer);
+		new DrillingBuilder(Items.COAL, 400, 1024, 128).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).veinSize(15, 40).setStress(16).save("coal", consumer);
+		new DrillingBuilder(Registration.RAW_DIAMOND.get(), 1000, 2048, 1024).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).setStress(65).veinSize(0.5f, 2).save("diamond", consumer);
+		new DrillingBuilder(Registration.RAW_REDSTONE.get(), 600, 1024, 256).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).veinSize(10, 30).setStress(20).save("redstone", consumer);
+		new DrillingBuilder(Registration.RAW_EMERALD.get(), 1000, 2048, 1024).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).veinSize(0.2f, 1).setStress(64).save("emerald", consumer);
+		new DrillingBuilder(new ProcessingOutput(new ItemStack(Registration.RAW_DIAMOND.get()), 1F), 600, Component.translatable("ore.coe.hardenedDiamond"), 4096, 2048).addOutput(Items.DIAMOND, 0.1f).setDrill(Ingredient.of(Registration.NETHERITE_DRILL_ITEM.get())).setDrillingFluid(FluidIngredient.fromFluid(Fluids.LAVA, 500)).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).setStress(32).veinSize(1f, 3f).save("hardened_diamond", consumer);
+		new DrillingBuilder(AllItems.RAW_ZINC.get(), 600, 1024, 128).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).veinSize(8, 24).setStress(28).save("zinc", consumer);
+		new DrillingBuilder(Items.LAPIS_LAZULI, 600, 1024, 128).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).setStress(20).veinSize(8, 24).save("lapis", consumer);
 
-		new DrillingBuilder(Items.GLOWSTONE_DUST, 60*20, 1024, 128).setBiomeWhitelist(BiomeTags.IS_NETHER).veinSize(5, 12).save("glowstone", consumer);
-		new DrillingBuilder(Items.QUARTZ, 60*20, 1024, 128).setBiomeWhitelist(BiomeTags.IS_NETHER).setStress(512).veinSize(8, 24).save("quartz", consumer);
-		new DrillingBuilder(new ItemStack(Blocks.ANCIENT_DEBRIS), 0.2f, 200*20, 4096, 2048).addOutput(Items.GOLD_NUGGET, 0.8f).addOutput(Blocks.NETHERRACK, 0.8f).addOutput(Blocks.MAGMA_BLOCK, 0.5f).setBiomeWhitelist(BiomeTags.IS_NETHER).setDrill(Ingredient.of(Registration.NETHERITE_DRILL_ITEM.get())).setDrillingFluid(FluidIngredient.fromFluid(Fluids.LAVA, 1000)).setStress(2048).veinSize(0.5f, 0.8f).save("netherite", consumer);
-		new DrillingBuilder(new ItemStack(Items.GOLD_NUGGET, 3), 20*20, 2048, 1024).setBiomeWhitelist(BiomeTags.IS_NETHER).addOutput(Items.GOLD_NUGGET, 0.5f).veinSize(3, 8).setStress(192).save("nether_gold", consumer);
+		new DrillingBuilder(Items.GLOWSTONE_DUST, 1000, 1024, 128).setBiomeWhitelist(BiomeTags.IS_NETHER).veinSize(5, 12).setStress(32).save("glowstone", consumer);
+		new DrillingBuilder(Items.QUARTZ, 1000, 1024, 128).setBiomeWhitelist(BiomeTags.IS_NETHER).setStress(28).veinSize(8, 24).save("quartz", consumer);
+		new DrillingBuilder(new ItemStack(Blocks.ANCIENT_DEBRIS), 0.3f, 1000, 4096, 2048).addOutput(Blocks.NETHERRACK, 0.2f).addOutput(Blocks.MAGMA_BLOCK, 0.5f).setBiomeWhitelist(BiomeTags.IS_NETHER).setDrill(Ingredient.of(Registration.NETHERITE_DRILL_ITEM.get())).setDrillingFluid(FluidIngredient.fromFluid(Fluids.LAVA, 200)).setStress(128).veinSize(0.5f, 0.8f).save("netherite", consumer);
+		new DrillingBuilder(new ItemStack(Items.GOLD_NUGGET, 3), 600, 2048, 1024).setBiomeWhitelist(BiomeTags.IS_NETHER).addOutput(Items.GOLD_NUGGET, 0.5f).veinSize(3, 8).setStress(30).save("nether_gold", consumer);
 
-		new ExtractorBuilder(new FluidStack(Fluids.WATER, 500), 20, 512, 128).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).setFinite(ThreeState.NEVER).save("water", consumer);
+        new ExtractorBuilder(new FluidStack(Fluids.LAVA, 1000), 100, 512, 20).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).setFinite(ThreeState.NEVER).save("lava", consumer);
+        new ExtractorBuilder(new FluidStack(Fluids.WATER, 1000), 100, 256, 20).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).setFinite(ThreeState.NEVER).save("water", consumer);
 
 		processing("redstone_milling", AllRecipeTypes.MILLING, consumer, b -> b.withItemIngredients(Ingredient.of(Registration.RAW_REDSTONE.get())).output(new ItemStack(Items.REDSTONE, 3)).duration(250));
 		processing("redstone_crushing", AllRecipeTypes.CRUSHING, consumer, b -> b.withItemIngredients(Ingredient.of(Registration.RAW_REDSTONE.get())).output(new ItemStack(Items.REDSTONE, 4)).duration(250));

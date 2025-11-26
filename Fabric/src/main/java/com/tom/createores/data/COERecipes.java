@@ -144,10 +144,11 @@ public class COERecipes extends FabricRecipeProvider {
 
 		new DrillingBuilder(Items.GLOWSTONE_DUST, 60*20, 1024, 128).setBiomeWhitelist(BiomeTags.IS_NETHER).veinSize(5, 12).save("glowstone", consumer);
 		new DrillingBuilder(Items.QUARTZ, 60*20, 1024, 128).setBiomeWhitelist(BiomeTags.IS_NETHER).setStress(512).veinSize(8, 24).save("quartz", consumer);
-		new DrillingBuilder(new ItemStack(Blocks.ANCIENT_DEBRIS), 0.2f, 200*20, 4096, 2048).addOutput(Items.GOLD_NUGGET, 0.8f).addOutput(Blocks.NETHERRACK, 0.8f).addOutput(Blocks.MAGMA_BLOCK, 0.5f).setBiomeWhitelist(BiomeTags.IS_NETHER).setDrill(Ingredient.of(Registration.NETHERITE_DRILL_ITEM.get())).setDrillingFluid(FluidIngredient.fromFluid(Fluids.LAVA, 1000)).setStress(2048).veinSize(0.5f, 0.8f).save("netherite", consumer);
+		new DrillingBuilder(new ItemStack(Blocks.ANCIENT_DEBRIS), 0.5f, 200*20, 4096, 2048).addOutput(Blocks.NETHERRACK, 0.1f).addOutput(Blocks.MAGMA_BLOCK, 0.4f).setBiomeWhitelist(BiomeTags.IS_NETHER).setDrill(Ingredient.of(Registration.NETHERITE_DRILL_ITEM.get())).setDrillingFluid(FluidIngredient.fromFluid(Fluids.LAVA, 1000)).setStress(2048).veinSize(0.5f, 0.8f).save("netherite", consumer);
 		new DrillingBuilder(new ItemStack(Items.GOLD_NUGGET, 3), 20*20, 2048, 1024).setBiomeWhitelist(BiomeTags.IS_NETHER).addOutput(Items.GOLD_NUGGET, 0.5f).veinSize(3, 8).setStress(192).save("nether_gold", consumer);
 
-		new ExtractorBuilder(new FluidStack(Fluids.WATER, 500), 20, 512, 128).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).setFinite(ThreeState.NEVER).save("water", consumer);
+        new ExtractorBuilder(new FluidStack(Fluids.LAVA, 1000), 100, 512, 128).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).setFinite(ThreeState.NEVER).save("lava", consumer);
+		new ExtractorBuilder(new FluidStack(Fluids.WATER, 1000), 100, 512, 128).setBiomeWhitelist(BiomeTags.IS_OVERWORLD).setFinite(ThreeState.NEVER).save("water", consumer);
 
 		processing("redstone_milling", AllRecipeTypes.MILLING, consumer, b -> b.withItemIngredients(Ingredient.of(Registration.RAW_REDSTONE.get())).output(new ItemStack(Items.REDSTONE, 3)).duration(250));
 		processing("redstone_crushing", AllRecipeTypes.CRUSHING, consumer, b -> b.withItemIngredients(Ingredient.of(Registration.RAW_REDSTONE.get())).output(new ItemStack(Items.REDSTONE, 4)).duration(250));

@@ -1,7 +1,7 @@
 # Create-Ore-Excavation
 Extract resources using machines powered by Rotational Force
 
-Download: [CurseForge](https://www.curseforge.com/minecraft/mc-mods/create-ore-excavation), [Modrinth](https://modrinth.com/mod/create-ore-excavation)
+I made it easier to be used in survival mod.
 
 ## CC: Tweaked
 The ore vein finder can be attached to a turtle and has one method:  

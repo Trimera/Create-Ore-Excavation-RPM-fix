@@ -9,7 +9,7 @@
     }
   ],
   "priority": 0,
-  "stress": 256,
-  "ticks": 1200,
+  "stress": 32,
+  "ticks": 1000,
   "vein_id": "createoreexcavation:ore_vein_type/glowstone"
 }

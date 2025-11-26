@@ -25,8 +25,8 @@ public class Config {
 
 			defaultInfinite = builder.comment("Veins infinite by default").translation("config.coe.defaultInfinite").define("defaultInfinite", true);
 
-			maxExtractorsPerVein = builder.comment("Max number of extractor per ore vein, Set to 0 for infinite").translation("config.coe.maxExtractorsPerVein")
-					.defineInRange("maxExtractorsPerVein", 0, 0, 64);
+			maxExtractorsPerVein = builder.comment("Max number of extractor per ore vein").translation("config.coe.maxExtractorsPerVein")
+					.defineInRange("maxExtractorsPerVein", 4, 1, 16);
 
 			veinFinderNear = builder.comment("Vein Finder 'Found Nearby' range in chunks").translation("config.coe.veinFinderNear")
 					.defineInRange("veinFinderNear", 1, 1, 8);

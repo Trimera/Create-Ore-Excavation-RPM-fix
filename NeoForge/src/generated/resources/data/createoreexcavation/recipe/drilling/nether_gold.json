@@ -14,7 +14,7 @@
     }
   ],
   "priority": 0,
-  "stress": 192,
-  "ticks": 400,
+  "stress": 30,
+  "ticks": 600,
   "veinId": "createoreexcavation:ore_vein_type/nether_gold"
 }

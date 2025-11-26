@@ -39,7 +39,7 @@ repositories {
             includeGroup("com.jamieswhiteshirt")
         }
     }
-    maven { url = "https://maven.terraformersmc.com/" }
+    maven { url = "https://maven.terraformersmc.com/releases" }
     maven { url = "https://maven.cafeteria.dev/releases" }
     maven {
 		name = "Ladysnake Libs"
@@ -55,9 +55,10 @@ repositories {
     }
     maven {
         // saps.dev Maven (KubeJS and Rhino)
-        url = "https://maven.saps.dev/minecraft"
+        url "https://maven.latvian.dev/releases"
         content {
             includeGroup "dev.latvian.mods"
+            includeGroup "dev.latvian.apps"
         }
     }
     maven {
@@ -95,7 +96,7 @@ loom {
             vmArg "-Dfabric-api.datagen"
             vmArg "-Dfabric-api.datagen.output-dir=${file("src/generated/resources")}"
             vmArg "-Dfabric-api.datagen.modid=createoreexcavation"
-            vmArg "-Dporting_lib.datagen.existing_resources=${file("src/main/resources")};${file("create_resources")};${file("../CreateOreExcavation-1.20/src/platform-shared/resources")}"
+            vmArg "-Dporting_lib.datagen.existing_resources=${file("src/main/resources")};${file("create_resources")}"
         }
     }
 }
@@ -187,7 +188,7 @@ dependencies {
     }
     
     //modApi(group: 'info.journeymap', name: 'journeymap-api', version: '2.0+1.20-fabric-SNAPSHOT', changing: true)
-    modApi("local:journeymap-api:1.20-1.9-fabric-S")//JourneyMap maven is missing the maven-metadata
+    modApi files("libs/journeymap-api-1.20.4-1.9-fabric-SNAPSHOT.jar")//JourneyMap maven is missing the maven-metadata
     modImplementation('curse.maven:journeymap-32274:4841232')
     
     modCompileOnly("cc.tweaked:cc-tweaked-1.20.1-fabric-api:1.108.4")
@@ -198,10 +199,10 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 sourceSets {
 	main {
 		java {
-			srcDir "../Forge/src/platform-shared/java"
+			srcDir "src/platform-shared/java"
 		}
 		resources {
-			srcDir "../Forge/src/platform-shared/resources"
+			srcDir "src/platform-shared/resources"
 		}
 	}
 }

@@ -93,7 +93,8 @@ public class OreData {
 	}
 
 	public boolean canExtract(Level lvl, BlockPos pos) {
-		if(Config.maxExtractorsPerVein == 0)return true;
+        int defualtNumOfExtractors = Config.maxExtractorsPerVein;
+		if(Config.maxExtractorsPerVein <= 0 || defualtNumOfExtractors > 5) defualtNumOfExtractors = 5;
 		if(extractors == null) {
 			extractors = new HashSet<>();
 			extractors.add(pos);
@@ -102,7 +103,7 @@ public class OreData {
 		if(extractors.contains(pos))
 			return true;
 		extractors.removeIf(p -> !(lvl.getBlockEntity(p) instanceof IDrill));
-		if(extractors.size() < Config.maxExtractorsPerVein) {
+		if(extractors.size() < defualtNumOfExtractors) {
 			extractors.add(pos);
 			return true;
 		}
